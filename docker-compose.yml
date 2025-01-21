@@ -1,0 +1,21 @@
+version: '3'
+
+services:
+  web: 
+    build: . 
+
+    image: template-image 
+
+    container_name: template-container  
+
+    restart: always 
+
+    stdin_open: true
+
+    tty: true 
+
+    volumes:
+      - "./app:/home/app" 
+
+    ports:
+      - 80:80 
